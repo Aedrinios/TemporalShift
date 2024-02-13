@@ -73,7 +73,7 @@ public class PlayerMoveController : MonoBehaviour
     /// </summary>
     private void HandleVertical()
     {
-        if (inputController.Jump && hitGround)
+        if (inputController.JumpBuffer > 0 && hitGround)
         {
             hitGround = false;
             targetVelocity.y = stats.JumpForce;
